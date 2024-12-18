@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecasting System</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f8ff;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+        section {
+            margin: 20px;
+        }
+        h1, h2 {
+            color: #2c3e50;
+        }
+        .container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .news-card {
+            background-color: #ecf0f1;
+            border: 1px solid #ccc;
+            padding: 20px;
+            width: 30%;
+            margin: 10px;
+            text-align: center;
+            border-radius: 8px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .news-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .news-card h3 {
+            font-size: 1.5em;
+            color: #34495e;
+        }
+        .news-card p {
+            color: #7f8c8d;
+        }
+        .news-card a {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .news-card a:hover {
+            background-color: #2980b9;
+        }
+        .news-content {
+            display: none;
+        }
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Weather Forecasting System</h1>
+        <p>Real-time updates for accurate weather predictions</p>
+    </header>
+
+    <section>
+        <h2>Latest Weather News</h2>
+        <div class="container">
+            <div class="news-card" onclick="showContent('cyclone_fengal')">
+                <h3>Cyclone Fengal</h3>
+                <p>This cyclone recently made landfall near Puducherry, bringing heavy rainfall and strong winds to Tamil Nadu and neighboring regions.</p>
+            </div>
+            <div class="news-card" onclick="showContent('india_weather')">
+                <h3>India Weather</h3>
+                <p>The India Meteorological Department (IMD) continues to monitor weather conditions across the country. Check the IMD website for updates.</p>
+            </div>
+            <div class="news-card" onclick="showContent('global_weather')">
+                <h3>Global Weather</h3>
+                <p>Various parts of the world are experiencing extreme weather events, including heatwaves, floods, and wildfires. Stay updated with global sources.</p>
+            </div>
+        </div>
+        <div class="container">
+            <div class="news-card" onclick="showContent('sydney_rainy_weekend')">
+                <h3>Sydney's Rainy Weekend</h3>
+                <p>A severe storm is expected to bring heavy rain, damaging winds, and hail to Sydney this weekend.</p>
+            </div>
+            <div class="news-card" onclick="showContent('iceland_volcano_eruption')">
+                <h3>Iceland Volcano Eruption</h3>
+                <p>The Reykjanes peninsula in Iceland has experienced its tenth volcanic eruption in three years.</p>
+            </div>
+            <div class="news-card" onclick="showContent('australian_earthquake')">
+                <h3>Australian Earthquake</h3>
+                <p>A magnitude 6.6 earthquake recently shook an Australian neighbor.</p>
+            </div>
+        </div>
+        <div class="container">
+            <div class="news-card" onclick="showContent('cyclone_alerts_australia')">
+                <h3>Cyclone Alerts for Australia</h3>
+                <p>Millions of Australians are on cyclone alert as dangerous storms continue to form.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="news-articles">
+        <div class="news-content" id="cyclone_fengal">
+            <h2>Cyclone Fengal</h2>
+            <p>Cyclone Fengal made landfall near Puducherry, bringing severe weather conditions to Tamil Nadu and neighboring regions. The cyclone caused widespread disruption, with heavy rainfall, strong winds, and flooding in various parts of the state.</p>
+            <h3>Precautions</h3>
+            <p>Authorities have issued warnings for coastal areas, advising residents to stay indoors and avoid travel during the cyclone's passage. Emergency response teams are on alert to provide assistance.</p>
+            <h3>Expected Duration</h3>
+            <p>It is anticipated that the cyclone will dissipate in the coming days, with conditions gradually improving after the storm's peak. Authorities will continue to monitor the situation.</p>
+        </div>
+        <div class="news-content" id="india_weather">
+            <h2>India Weather</h2>
+            <p>The India Meteorological Department (IMD) continues to monitor weather conditions across the country. The IMD provides weather forecasts and updates through its website and app, helping people prepare for upcoming weather events.</p>
+        </div>
+        <div class="news-content" id="global_weather">
+            <h2>Global Weather</h2>
+            <p>Various parts of the world are experiencing extreme weather events, including heatwaves, floods, and wildfires. Stay updated with the latest information from global news sources and meteorological agencies.</p>
+        </div>
+        <div class="news-content" id="sydney_rainy_weekend">
+            <h2>Sydney's Rainy Weekend</h2>
+            <p>A severe storm is expected to bring heavy rain, damaging winds, and hail to Sydney this weekend. Authorities are advising residents to take necessary precautions and stay informed about the storm's progression.</p>
+        </div>
+        <div class="news-content" id="iceland_volcano_eruption">
+            <h2>Iceland Volcano Eruption</h2>
+            <p>The Reykjanes peninsula in Iceland has experienced its tenth volcanic eruption in three years, leading to concerns about potential hazards such as lava flow, ash clouds, and disruptions to air traffic.</p>
+        </div>
+        <div class="news-content" id="australian_earthquake">
+            <h2>Australian Earthquake</h2>
+            <p>A magnitude 6.6 earthquake recently shook an Australian neighbor, causing damage in nearby areas. Authorities are conducting assessments, and aftershocks are expected in the coming days.</p>
+        </div>
+        <div class="news-content" id="cyclone_alerts_australia">
+            <h2>Cyclone Alerts for Australia</h2>
+            <p>Millions of Australians are on cyclone alert as dangerous storms continue to form in the region. Meteorological agencies have issued warnings, advising people to stay prepared and follow official instructions.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Weather Forecasting System | All Rights Reserved</p>
+    </footer>
+
+    <script>
+        function showContent(contentId) {
+            // Hide all news content
+            var contents = document.querySelectorAll('.news-content');
+            contents.forEach(function(content) {
+                content.style.display = 'none';
+            });
+
+            // Show the selected news content
+            document.getElementById(contentId).style.display = 'block';
+        }
+    </script>
+</body>
+</html>
